@@ -30,7 +30,7 @@ tail(words); // no need to capture the return value since we are not checking it
 assertEqual(words.length, 3); // original array should still have 3 elements!
 
 // Test Case 3: An array with only one element
-console.log(tail([1])); // ...should yield an empty array for its tail
+assertEqual(tail([1]), 0); // ...should yield an empty array for its tail
 
 // Test Case 4: An empty array...
-console.log(tail([])); // ...should yield an empty array for its tail
+assertEqual(tail([]), 0); // ...should yield an empty array for its tail
