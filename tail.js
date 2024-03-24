@@ -12,13 +12,8 @@ const assertEqual = function(actual, expected) {
 
 // A function that returns the tail of an array
 const tail = function(array) {
-  // Initialize the new array formed
-  let newArr = [];
-  // Loop over the array
-  for (let i = 0; i < array.length; i++) {
-    newArr.push(array[i]);
-  }
-  return newArr.slice(1);
+  // Remove the first element without changing the original array
+  return array.slice(1);
 };
 
 
