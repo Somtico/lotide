@@ -1,38 +1,19 @@
 // Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function(firstArr, secondArr) {
-  // Declare variables to store the items from the first and second arrays
-  let firstArrItems = "";
-  let secondArrItems = "";
-  // Loop over first array
-  for (let i = 0; i < firstArr.length; i++) {
-    // Store current element in firstArrItem variable
-    firstArrItems += firstArr[i];
-  }
-  
-  // Loop over second array
-  for (let j = 0; j < secondArr.length; j++) {
-    // Store current element in secondArrItem variable
-    secondArrItems += secondArr[j];
-  }
-  // console.log(`First array: ${firstArrItems}`);
-  // console.log(`Second array: ${secondArrItems}`);
-  
-  // Compare the two arrays
-  if (firstArrItems === secondArrItems) {
-    // console.log(true);
+  // Check if the arrays have the same length
+  if (firstArr.length === secondArr.length) {
+    // Loop over first array
+    for (let i = 0; i < firstArr.length; i++) {
+      // Check if the item is equal for both arrays
+      if (firstArr[i] !== secondArr[i]) {
+        return false;
+      }
+    }
     return true;
   } else {
-    // console.log(false);
     return false;
   }
 };
-
-//TEST eqArrays FUNCTION
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
-eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
-
 
 // FUNCTION TO TEST USER INPUT
 const assertEqual = function(actual, expected) {
@@ -47,6 +28,11 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true); // => should PASS
-assertEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "Labs"]), true);
-assertEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "labs"]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true); // => should FAIL
+assertEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "Labs"]), true); // => should PASS
+assertEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "labs"]), true); // => should FAIL
+assertEqual(eqArrays([12, 3], [1, 23]), true); // => should FAIL
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => should FAIL
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), false); // => should FAIL
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => should PASS
