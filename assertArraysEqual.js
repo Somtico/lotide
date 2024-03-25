@@ -18,23 +18,25 @@ const eqArrays = function(firstArr, secondArr) {
 
 
 // FUNCTION TO TEST USER INPUT
-const assertArraysEqual = function(arrays) {
+const assertArraysEqual = function(array1, array2) {
+  // Call eqArrays to compare the arrays and store the result in a variable
+  let result = eqArrays(array1, array2);
   // Check that argument is true
-  if (arrays) {
+  if (result === true) {
     // If argument returns true
-    console.log(`✅✅✅ Assertion Passed: both arrays are identical`);
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
     // Else print a message
-    console.log(`🛑🛑🛑 Assertion Failed: both arrays are not identical`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
 };
 
 // TEST CODE
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3, 4])); // => should FAIL
-assertArraysEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "Labs"])); // => should PASS
-assertArraysEqual(eqArrays(["Lighthouse", "Labs"], ["Lighthouse", "labs"])); // => should FAIL
-assertArraysEqual(eqArrays([12, 3], [1, 23])); // => should FAIL
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3])); // => should PASS
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1])); // => should FAIL
-assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => should FAIL
-assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // => should FAIL
+assertArraysEqual(["Lighthouse", "Labs"], ["Lighthouse", "Labs"]); // => should PASS
+assertArraysEqual(["Lighthouse", "Labs"], ["Lighthouse", "labs"]); // => should FAIL
+assertArraysEqual([12, 3], [1, 23]); // => should FAIL
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => should FAIL
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => should FAIL
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => should PASS
