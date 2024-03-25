@@ -4,7 +4,7 @@ const eqArrays = function(firstArr, secondArr) {
   if (firstArr.length !== secondArr.length) {
     return false;
   }
-  // Loop over first array
+  // Loop over first array and return false as soon as a mismatch is found
   for (let i = 0; i < firstArr.length; i++) {
     // Check if the item is equal for both arrays
     if (firstArr[i] !== secondArr[i]) {
