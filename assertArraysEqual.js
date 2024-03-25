@@ -19,10 +19,8 @@ const eqArrays = function(firstArr, secondArr) {
 
 // FUNCTION TO TEST USER INPUT
 const assertArraysEqual = function(array1, array2) {
-  // Call eqArrays to compare the arrays and store the result in a variable
-  let result = eqArrays(array1, array2);
   // Check that argument is true
-  if (result === true) {
+  if (eqArrays(array1, array2)) {
     // If argument returns true
     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
