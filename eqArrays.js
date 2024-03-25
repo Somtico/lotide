@@ -9,6 +9,7 @@ const eqArrays = function(firstArr, secondArr) {
     // Check if the item is equal for both arrays
     if (firstArr[i] !== secondArr[i]) {
       return false;
+      break;
     }
   }
   return true;
