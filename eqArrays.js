@@ -1,18 +1,17 @@
 // Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function(firstArr, secondArr) {
   // Check if the arrays have the same length
-  if (firstArr.length === secondArr.length) {
-    // Loop over first array
-    for (let i = 0; i < firstArr.length; i++) {
-      // Check if the item is equal for both arrays
-      if (firstArr[i] !== secondArr[i]) {
-        return false;
-      }
-    }
-    return true;
-  } else {
+  if (firstArr.length !== secondArr.length) {
     return false;
   }
+  // Loop over first array
+  for (let i = 0; i < firstArr.length; i++) {
+    // Check if the item is equal for both arrays
+    if (firstArr[i] !== secondArr[i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 // FUNCTION TO TEST USER INPUT
