@@ -34,7 +34,7 @@ const countLetters = function(string) {
   return result;
 };
 
-const result2 = countLetters("lighthouse in the house");
+const result2 = countLetters(" lighthouse in the house");
 
 assertEqual(result2["h"], 4); // Should PASS
 assertEqual(result2["i"], 2); // Should PASS
