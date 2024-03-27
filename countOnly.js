@@ -22,30 +22,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const countOnly = function(allItems, itemsToCount) {
-  // Create a variable to store the filtered items in
-  let filter = [];
-  // Loop over the array and object and filter out the object values that are true
-  for (let item of allItems) {
-    for (let wanted in itemsToCount) {
-      if (itemsToCount[wanted] === true && item === wanted) {
-        filter.push(wanted);
-      }
-    }
-  }
   // Initialize a new object to store the filtered items in
   let count = {};
-  // Extract the items from the filter array and store them in a new object
-  for (let filtered of filter) {
-    count[filtered] = 1;
-  }
-  // Check to see whether the key exists in the count object and increase its value
-  for (let filtered of filter) {
-    for (let key in count) {
-      if (filtered === key) {
-        count[filtered] += 1;
-      }
+  // Extract the items that are true from the allItems array and store them in a new object
+  for (let item of allItems) {
+    if (count[item]) {
+      count[item] += 1;
+    } else if (itemsToCount[item] === true) {
+      count[item] = 1;
     }
-    break;
   }
   return count;
 };
@@ -70,7 +55,7 @@ const result1 = countOnly(firstNames, {
   Agouhanna: false,
 });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], 1);
-assertEqual(result1["Fang"], 3);
-assertEqual(result1["Agouhanna"], undefined);
+assertEqual(result1["Jason"], 1); // Test should PASS
+assertEqual(result1["Karima"], 1); // Test should FAIL
+assertEqual(result1["Fang"], 3); // Test should FAIL
+assertEqual(result1["Agouhanna"], undefined); // Test should PASS
