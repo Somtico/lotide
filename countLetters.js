@@ -25,8 +25,7 @@ const countLetters = function(string) {
   const result = {};
   // Loop over the string input
   for (let letter of string) {
-    // Check whether the letter already exists in the result object
-    if (result[letter]) {
+    if (result[letter]) { // Check whether the letter already exists in the result object
       result[letter] += 1;
     } else if (letter !== ' ') { // Add the letter to the result object if it is not a space
       result[letter] = 1;
