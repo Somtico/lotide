@@ -1,6 +1,6 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function (array, callback) {
+const map = function(array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -9,7 +9,7 @@ const map = function (array, callback) {
 };
 
 // TEST CODE
-const eqArrays = function (firstArr, secondArr) {
+const eqArrays = function(firstArr, secondArr) {
   // Check if the arrays have the same length
   if (firstArr.length !== secondArr.length) {
     return false;
@@ -24,7 +24,7 @@ const eqArrays = function (firstArr, secondArr) {
   return true;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   // Check that argument is true
   if (eqArrays(array1, array2)) {
     // If argument returns true
