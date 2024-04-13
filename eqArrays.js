@@ -1,6 +1,12 @@
 
 // Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function(firstArr, secondArr) {
+  // Check if both arguments are arrays
+  if (!Array.isArray(firstArr) || !Array.isArray(secondArr)) {
+    console.log("Both arguments must be arrays");
+    return false;
+  }
+  
   // Check if the arrays have the same length
   if (firstArr.length !== secondArr.length) {
     return false;

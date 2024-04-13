@@ -1,5 +1,6 @@
 // Implement the definition for function eqObjects which will take in two objects and returns true or false, based on a perfect match.
 
+
 // FUNCTION IMPLEMENTATION
 const eqObjects = function(object1, object2) {
   // Extract the keys into an array
@@ -23,29 +24,5 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 };
-
-// TEST CODE
-const assertEqual = function(actual, expected) {
-  // Use if...else statements to compare the two values it takes in
-  if (actual === expected) {
-    // Check if they match and print a message
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    // Else print a message
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-
-const longSleeveShirtObject = {
-  size: "medium",
-  color: "red",
-  sleeveLength: "long",
-};
-
-assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
 module.exports = eqObjects;
