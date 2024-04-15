@@ -70,3 +70,5 @@ assertEqual(result4, undefined); // Expected output: undefined
 
 const result5 = findKey({}, (x) => x === 42);
 assertEqual(result5, undefined); // Expected output: undefined
+
+module.exports = findKey;

@@ -47,3 +47,4 @@ const person2 = {
 assertObjectsEqual(car, vehicle); // => should PASS
 assertObjectsEqual(person1, person2); // => should FAIL
 
+module.exports = assertObjectsEqual;

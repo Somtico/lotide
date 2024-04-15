@@ -59,3 +59,5 @@ assertArraysEqual(letterPositions("practice makes perfect").r, [1, 17]);
 assertArraysEqual(letterPositions("practice makes perfect").a, [2, 10]);
 assertArraysEqual(letterPositions("practice makes perfect").c, [3, 6, 20]);
 assertArraysEqual(letterPositions("practice makes perfect").e, [7, 12, 16, 19]);
+
+module.exports = letterPositions;

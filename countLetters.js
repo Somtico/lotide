@@ -40,3 +40,5 @@ assertEqual(result2["h"], 4); // Should PASS
 assertEqual(result2["i"], 2); // Should PASS
 assertEqual(result2["g"], 5); // Should FAIL
 assertEqual(result2["e"], 0); // Should FAIL
+
+module.exports = countLetters;

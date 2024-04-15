@@ -61,3 +61,5 @@ console.log("---");
 // Test case 4: Flattening an array with mixed data types
 assertArraysEqual(flatten([1, [2, 'hello'], [true, false], [null, undefined]]), [1, 2, 'hello', true, false, null, undefined]); // Should PASS
 console.log("---");
+
+module.exports = flatten;

@@ -47,3 +47,5 @@ assertArraysEqual(
   map(words, (word) => word[word.length - 1]),
   ["d", "l", "o", "r", "m"]
 );
+
+module.exports = map;

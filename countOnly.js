@@ -59,3 +59,5 @@ assertEqual(result1["Jason"], 1); // Test should PASS
 assertEqual(result1["Karima"], 1); // Test should FAIL
 assertEqual(result1["Fang"], 3); // Test should FAIL
 assertEqual(result1["Agouhanna"], undefined); // Test should PASS
+
+module.exports = countOnly;
